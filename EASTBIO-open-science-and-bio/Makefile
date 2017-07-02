@@ -52,6 +52,6 @@ clean: clean_intermediates clean_pdf
 # Currently, changing any sub-file will trigger regeneration of all
 # output PDF files.
 # TODO: Add images/*.png images/*.jpg etc
-%.pdf : %.tex handoutWithNotes.sty
+%.pdf : %.tex sections/*.tex handoutWithNotes.sty
 	pdflatex $<
 	pdflatex $<
