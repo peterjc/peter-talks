@@ -37,7 +37,8 @@
   \begin{itemize}
     \item \emph{``If I have seen further it is by standing on the shoulders of Giants.''} (Issac Newton, 1676)
     \item Science works best when can build on past work
-    \item Methods section in papers should let you do this
+    \item Methods section in papers \emph{should} let you do this
+    \item For computation methods, would ideally get the code...
   \end{itemize}
 \end{frame}
 
@@ -50,8 +51,150 @@
       \end{itemize}
     \item Open Source licensing defines explicit terms:
       \begin{itemize}
-        \item GIVES PERMISSION to use, re-use, adapt, at no cost.
+        \item GIVES PERMISSION to use, re-use, share, change, at no cost.
+        \item That includes packaging for easier installation
       \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\section{Open Source}
+
+\subsection{Open Source Licenses}
+
+\begin{frame}
+  \frametitle{Many Open Source Licenses}
+  \begin{itemize}
+    \item Open Source Initiative \url{https://opensource.org/} has a list
+    \item Very liberal, e.g. MIT and BSD
+    \item `Viral', e.g. GNU Public Licence (GPL)
+  \end{itemize}
+  Note: Combinging code from multiple  sources can hit license problems
+\end{frame}
+
+\subsection{Code sharing}
+
+\begin{frame}
+  \frametitle{Code sharing / development}
+  Most projects use a web-based platform:
+  \begin{itemize}
+    \item \href{https://bitbucket.org/product}{Bitbucket}
+    \item \href{https://github.com/}{GitHub}
+    \item \href{https://about.gitlab.com/}{GitLab}
+    \item Sourceforge (popular 10 years ago)
+    \item Lab specific website
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Code sharing}
+  Can be problems with longevity (esp. personal webpages).
+
+  Still a role for long term static archives:
+  \begin{itemize}
+    \item Journal paper supplementary material
+    \item \href{http://about.zenodo.org/}{Zenodo} (powered by CERN)
+  \end{itemize}
+\end{frame}
+
+\subsection{Open Source in Biology}
+
+\begin{frame}
+  \frametitle{Open Source in Biology}
+  \begin{itemize}
+    \item Much early bioinformatics by Systems Administrators
+    \item e.g. \emph{How Perl Saved the Human Genome Project} (Lincoln Stein, 1996)
+    \item Absorbed ideas/culture from free and open source world, e.g. Linux, Perl
+    \item Open source required championing in early days, e.g. \href{https://www.open-bio.org/wiki/BOSC}{Bioinformatics Open Source Conference} since 2000.\footnote{Peter is a former co-chair}
+    \item Many journals now on-board
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Open Source Bioinformatics examples}
+  Important funded projects in genomics:
+  \begin{itemize}
+    \item \url{https://github.com/samtools/samtools} \\ Wellcome Trust Sanger Institute
+    \item \url{https://github.com/broadinstitute/gatk} \\ Broad Institute
+    \item \url{https://github.com/galaxyproject/galaxy} \\ Penn State
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Open Source Bioinformatics examples}
+  Large long-running un-funded projects:
+  \begin{itemize}
+    \item \url{https://github.com/bioperl/bioperl-live} - \href{http://bioperl.org}{BioPerl}
+    \item \url{https://github.com/biopython/biopython} - \href{http://biopython.org}{Biopython}\footnote{Peter is a major contributor}
+    \item \url{https://github.com/bioruby/bioruby} - \href{http://bioruby.org}{BioRuby}
+    \item \url{https://github.com/biojava/biojava} - \href{http://biojava.org}{BioJava}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Open Source Bioinformatics examples}
+  Relevant smaller projects, by individuals or smaller groups:
+  \begin{itemize}
+    \item \url{https://github.com/arq5x/bedtools}
+    \item \url{https://github.com/arq5x/poretools}
+    \item \url{https://sourceforge.net/projects/mira-assembler/}
+    \item \url{https://github.com/tseemann/prokka}
+    \item \url{https://github.com/COMBINE-lab/salmon}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Open Source Bioinformatics examples}
+  Sequencing companies with open source projects:
+  \begin{itemize}
+    \item \url{https://github.com/illumina} \\ Illumina
+    \item \url{https://github.com/nanoporetech/} \\ Oxford Nanopore Technologies
+    \item \url{https://github.com/PacificBiosciences} \\ Pacific Biosciences
+    \item \url{https://github.com/iontorrent} \\ Ion Torrent
+  \end{itemize}
+\end{frame}
+
+\section{Open Data}
+
+\begin{frame}
+  \frametitle{Open Data in Genomics}
+  Primary data is \emph{usually} shared, now expected:
+  \begin{itemize}
+    \item DNA, RNA, Proteins at EMBL-EBI, NCBI, DDBJ
+    \item Raw sequencing data too at EMBL SRA, NCBI SRA
+    \item Structures at RSCB Protein Data Bank
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Open Data in Genomics}
+  Curated data is not always freely openly shared,
+  \begin{itemize}
+    \item Kyoto Encyclopedia of Genes and Genomes (KEGG) now has \href{http://www.kegg.jp/kegg/legal.html}{restrictions}
+    \item The Arabidopsis Information Resource (TAIR) now has \href{https://www.arabidopsis.org/doc/about/tair_subscriptions/413}{fees}
+    \item Also some groups like to hoard their precious data...
+  \end{itemize}
+\end{frame}
+
+\section{Open Data \& Software $\rightarrow$ Reproducible?}
+
+\begin{frame}
+  \frametitle{Open Data \& Software $\rightarrow$ Reproducible?}
+  Given a well written scientific paper:
+  \begin{itemize}
+    \item The raw data will be available (e.g. NCBI accessions)
+    \item The tools used and exact versions will be stated
+    \item The actual workflow, scripts or command lines are given
+  \end{itemize}
+  How easy would it be to repeat the analysis?
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Open Data \& Software $\rightarrow$ Reproducible?}
+  \begin{itemize}
+    \item Sadly click-and-repeat methods in papers are still an aspiration
+    \item Being worked on, still lots of technical hurdles
+    \item However, openly sharing the data and code is first step!
   \end{itemize}
 \end{frame}
 
@@ -67,6 +210,25 @@
     \item BioStars \url{https://www.biostars.org}
     \item Bioinformatics StackExchange \url{https://bioinformatics.stackexchange.com/}
     \item SeqAnswers Forums \url{http://seqanswers.com/forums}
+ \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Conculsions}
+  \begin{itemize}
+    \item Open science is a community - help each other
+    \item Register a GitHub account to contribute back
+      \begin{itemize}
+        \item Raise quries; log bugs; offer improvements
+        \item Use this to share your own scripts/tools
+      \end{itemize}
+    \item Your GitHub (etc) profile can be part of your CV, e.g.
+      \begin{itemize}
+        \item \href{https://github.com/peterjc}{Peter's GitHub profile}
+        \item \href{https://bitbucket.org/peterjc/}{Peter's BitBucket profile}
+        \item \href{https://gitlab.com/pjacock}{Peter's GitLab profile}
+        \item \href{https://www.biostars.org/u/146/}{Peter's BioStars profile}
+      \end{itemize}
  \end{itemize}
 \end{frame}
 
