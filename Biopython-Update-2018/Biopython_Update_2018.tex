@@ -101,5 +101,59 @@
   }
 \end{frame}
 
+
+\begin{frame}
+\frametitle{Biopython 1.71 (April 2018)}
+\begin{itemize}
+   \item Python 3-compatible rich comparison for all Bio.PDB objects
+   \item New options and fixes for parsing and writing files, including PIR format for sequences, mmCIF files, and Gene files.
+   \item New codon tables 27-31 from NCBI (NCBI genetic code table version 4.2) were added.
+       \begin{itemize}
+          \item Now supports ambiguous codons for either stop or amino acid
+       \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Biopython 1.72 (June 2018)}
+\begin{itemize}
+    \item NumPy no longer needed at compile time
+    \item Bio.Entrez now supports NCBI API key
+    \item New alternative pairwise alignment module
+    \item Bio.SearchIO is no longer considered experimental
+\end{itemize}
+\end{frame}
+
+\subsection{Policies}
+
+\begin{frame}
+\frametitle{Python Versions}
+\begin{itemize}
+\item Currently support Python 2.7, 3.4, 3.5 and 3.6
+\item Clear end of life for Python 2 support in 2020, pledged on \url{http://python3statement.org/}
+\item Also support and test on PyPy
+\item Support for Jython now deprecated
+\item Next release will officially support Python 3.7
+\end{itemize}
+\end{frame}
+
+\subsection{Engineering}
+
+\begin{frame}
+\frametitle{PpPI, pip and wheels}
+\begin{itemize}
+\item Recommend ``pip install biopython``
+\item This fetches from Python Package Index (PyPI)
+\item Will use pre-compiled wheel files if available
+\item We build the wheels on AppVeyor \& TravisCI
+    \begin{itemize}
+        \item Folling NumPy community in Using the multibuild system, \\
+              developed by Matthew Brett and the MacPython project. \\
+              \url{https://github.com/matthew-brett/multibuild} \\
+              \url{https://github.com/biopython/biopython-wheels}
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
 % etc
 \end{document}
