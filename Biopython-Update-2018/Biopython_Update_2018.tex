@@ -2,6 +2,8 @@
 \input{sections/preamble_style}
 % LISTINGS SETTING
 \input{sections/preamble_codelistings}
+% Misc packages
+\usepackage{multicol}
 
 %%%
 % TITLE PREAMBLE
@@ -32,13 +34,68 @@
 \section{Introduction}
 
 \begin{frame}
-  \frametitle{Progress in Science}
+  \frametitle{What is Biopython?}
+
   \begin{itemize}
-    \item \emph{``If I have seen further it is by standing on the shoulders of Giants.''} (Issac Newton, 1676)
-    \item Science works best when can build on past work
-    \item Methods section in papers \emph{should} let you do this
-    \item For computation methods, would ideally get the code...
+  \item Collection of modules for biological computation in Python
+  \begin{itemize}
+  \item Sequence handling and motifs, parsers, database queries, protein structures, phylogenetics, tool wrappers and more.
   \end{itemize}
+  \item Started in 1999, first release in 2000
+  \item Open source and freely available (Biopython license)
+  \end{itemize}
+
+\end{frame}
+
+\section{Updates}
+
+\begin{frame}
+  \frametitle{43 named contributors in last year, 18 newcomers with star!}
+  \scriptsize{
+  \begin{multicols}{3}
+  \begin{itemize}
+    \item Adhemar Zerlotini
+    \item Ariel Aptekmann
+    \item Benjamin Vaisvil*
+    \item Blaise Li
+    \item Chad Parmet
+    \item Chris Rands
+    \item Christian Brueffer
+    \item Connor T. Skennerton
+    \item Erik Cederstrand*
+    \item Fei Qi*
+    \item Francesco Gastaldello
+    \item James Jeffryes*
+    \item Jerven Bolleman*
+    \item Joe Greener*
+    \item Joerg Schaarschmidt*
+    \item João Rodrigues
+    \item Jeroen Van Goey
+    \item Jun Aruga*
+    \item Kai Blin
+    \item Kozo Nishida
+    \item Lewis A. Marshall*
+    \item Markus Piotrowski
+    \item Michiel de Hoon
+    \item Nicolas Fontrodona*
+    \item Pamela Russell*
+    \item Peter Cock
+    \item Philip Bergstrom*
+    \item rht*
+    \item Saket Choudhary
+    \item Shuichiro Makigaki*
+    \item Shyam Saladi*
+    \item Siong Kong
+    \item Spencer Bliven
+    \item Stefans Mezulis
+    \item Steve Bond
+    \item Yasar L. Ahmed*
+    \item Zachary Sailer*
+    \item Zaid Ur-Rehman*
+    \item Wibowo 'Bow' Arindrarto
+  \end{itemize}
+  \end{multicols}
+  }
 \end{frame}
 
 % etc
