@@ -148,11 +148,23 @@
 \item Will use pre-compiled wheel files if available
 \item We build the wheels on AppVeyor \& TravisCI
     \begin{itemize}
-        \item Folling NumPy community in Using the multibuild system, \\
+        \item Following NumPy community in Using the multibuild system, \\
               developed by Matthew Brett and the MacPython project. \\
               \url{https://github.com/matthew-brett/multibuild} \\
               \url{https://github.com/biopython/biopython-wheels}
     \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Using GitHub to help new contributors}
+\begin{itemize}
+   \item Issue templates (to help with bug reporting)
+   \item Pull request templates (to help with expectations)
+   \item \texttt{CODEOWNERS} file to help assign code reviews
+   \item Using \textit{Easy Fix} tag on some issues, \\ intended for new contributors
+   \item Already have a \texttt{CONTRIBUTING} text file
+   \item Do we need a \texttt{CODE\_OF\_CONDUCT} too?
 \end{itemize}
 \end{frame}
 
@@ -197,13 +209,23 @@ Permission to use, copy, modify, and distribute this software and its documentat
 \item Requires checking each file to confirm all
     contributors agree to dual licensing
 \item As of Biopython 1.72, about $20\%$ of code files done
-\item Only one minor contributor has refused to date.
+\item Only one minor contributor has refused to date
 \end{itemize}
 \end{frame}
 
-%Sphinx
+\section{On going work}
 
-%On going work
+\begin{frame}
+\frametitle{On going work}
+\begin{itemize}
+    \item Moving from epydoc to Sphinx for API docs
+    \item Improving compliance with PEP8 and PEP257 style guidelines
+    \item Improving code test coverage \url{https://codecov.io/github/biopython/biopython/}
+    \item Planning what to do with legacy Alphabet objects
+    \item Simplifying our release process
+    \item Other new contributor driven efforts
+\end{itemize}
+\end{frame}
 
 % etc
 \end{document}
