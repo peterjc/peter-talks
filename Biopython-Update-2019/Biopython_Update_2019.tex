@@ -1,0 +1,227 @@
+%% GENERIC STYLE SETTINGS
+\input{sections/preamble_style}
+% LISTINGS SETTING
+\input{sections/preamble_codelistings}
+% Misc packages
+\usepackage{multicol}
+
+%%%
+% TITLE PREAMBLE
+\title[Biopython Project Update 2019] % (optional, only for long titles)
+{Biopython Project Update 2019}
+\subtitle{Standing on each other's shoulders \\ \includegraphics[height=3cm]{images/biopython_logo_m.png}}
+\author[Cock] % (optional, for multiple authors)
+{Peter~Cock (\href{https://twitter.com/pjacock}{@pjacock on Twitter}), \\
+The Biopython Contributors (\href{https://twitter.com/Biopython}{@biopython on Twitter})}
+\institute[The James Hutton Institute] % (optional)
+{
+  Information and Computational Sciences\\
+  The James Hutton Institute
+}
+\date[July 2019] % (optional)
+{Basel, Switzerland, 25$^{th}$ July 2019}
+\subject{Bioinformatics}
+
+%%%
+% START DOCUMENT
+\begin{document}
+
+\frame[plain]{\titlepage}
+
+\begin{frame}
+  \frametitle{What is Biopython?}
+
+  \begin{itemize}
+  \item Collection of modules for biological computation in Python
+  \begin{itemize}
+  \item Sequence handling and motifs, parsers, database queries, protein structures, phylogenetics, tool wrappers and more.
+  \end{itemize}
+  \item Started in 1999, first release in 2000
+  \item Open source and freely available (Biopython license)
+  \item \url{https://biopython.org} and @Biopython on Twitter
+  \end{itemize}
+
+\center
+\includegraphics[height=2.5cm]{images/biopython_logo_m.png}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{38 named contributors in last year, \\ 16 newcomers with star!}
+  \scriptsize{
+  \begin{multicols}{3}
+  \begin{itemize}
+    \item Alona Levy-Jurgenson*
+    \item Andrey Raspopov*
+    \item Antony Lee
+    \item Ariel Aptekmann
+    \item Benjamin Rowell*
+    \item Bernhard Thiel
+    \item Brandon Invergo
+    \item Catherine Lesuisse
+    \item Chris Rands
+    \item Darcy Mason*
+    \item Deepak Khatri*
+    \item Devang Thakkar*
+    \item Gert Hulselmans
+    \item Ivan Antonov*
+    \item Jared Andrews
+    \item Jens Thomas*
+    \item Jeremy LaBarage*
+    \item Juraj Szász*
+    \item Kai Blin
+    \item Konstantin Vdovkin*
+    \item Lenna Peterson
+    \item Manuel Nuno Melo*
+    \item Mark Amery
+    \item Markus Piotrowski
+    \item Maximilian Greil
+    \item Micky Yun Chan*
+    \item Nick Negretti*
+    \item Peter Cock
+    \item Peter Kerpedjiev
+    \item Ralf Stephan
+    \item Rob Miller
+    \item Rona Costello*
+    \item Sergio Valqui
+    \item Spencer Bliven
+    \item Victor Lin
+    \item Wibowo 'Bow' Arindrarto
+    \item Yi Hsiao*
+    \item Zheng Ruan
+  \end{itemize}
+  \end{multicols}
+  }
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Biopython 1.73 (April 2019)}
+\begin{itemize}
+   \item Stuff
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Biopython 1.74 (July 2019)}
+\begin{itemize}
+    \item Stuff
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Python Versions}
+\begin{itemize}
+\item Currently support Python 2.7, 3.4, 3.5, 3.6
+\item About to drop Python 3.4 and add Python 3.8
+\item Clear end of life for Python 2 support in 2020, pledged on \url{http://python3statement.org/}
+\item Also support and test on PyPy
+\item Support for Jython now deprecated
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{PyPI, pip and wheels}
+\begin{itemize}
+\item Recommend ``pip install biopython``
+\item This fetches from Python Package Index (PyPI)
+\item Will use pre-compiled wheel files if available
+\item We build the wheels on AppVeyor \& TravisCI
+    \begin{itemize}
+        \item Following NumPy community in using the multibuild system, \\
+              developed by Matthew Brett and the MacPython project. \\
+              \url{https://github.com/matthew-brett/multibuild} \\
+              \url{https://github.com/biopython/biopython-wheels}
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Biopython's Open Source License}
+\begin{itemize}
+\item The Open Source Initiative \url{https://opensource.org/}
+    maintains a list of approved open source licenses
+\item This is the \textit{de facto} gold standard.
+\item Biopython's license is not (quite) on that list.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Historical Permission Notice \\ and Disclaimer (HPND)}
+Permission to use, copy, modify and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies[,] [and] that both [that] [the] copyright notice and this permission notice appear in supporting documentation[, and that the name [of] $<$copyright holder$>$ [or $<$related entities$>$] not be used in advertising or publicity pertaining to distribution of the software without specific, written prior permission]. [$<$copyright holder$>$ makes no representations about the suitability of this software for any purpose. It is provided ``as is'' without express or implied warranty.]
+
+%[<copyright holder> DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS[,][.] IN NO EVENT SHALL <copyright holder> BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.]
+
+\url{https://opensource.org/licenses/HPND}
+\end{frame}
+
+\begin{frame}
+\frametitle{Biopython License Agreement}
+\textit{Italics highlighting ony substantial difference to the HPND:}
+\vspace{6pt} \\
+
+Permission to use, copy, modify, and distribute this software and its documentation \textit{with or without modifications} and for any purpose and without fee is hereby granted, provided that any copyright notices appear in all copies and that both those copyright notices and this permission notice appear in supporting documentation, and that the names of the contributors or copyright holders not be used in advertising or publicity pertaining to distribution of the software without specific prior permission.
+
+%THE CONTRIBUTORS AND COPYRIGHT HOLDERS OF THIS SOFTWARE DISCLAIM ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL THE CONTRIBUTORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+\end{frame}
+
+\begin{frame}
+\frametitle{Biopython's Open Source License}
+\begin{itemize}
+\item We could ask the Open Source Initiative (OSI)
+    to approve our license (as an HPND variant?)
+\item We've agreed to gradually dual-license the code
+    under our old license and the 3-clause BSD license
+\item Requires checking each file to confirm all
+    contributors agree to dual licensing
+\item As of Biopython 1.72, about $20\%$ of code files done
+\item Only one minor contributor has refused to date
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{On going work}
+\begin{itemize}
+    \item Moving from epydoc to Sphinx for API docs \\
+          (and from \LaTeX to Sphinx for Tutorial?)
+    \item Improving compliance with PEP8 and PEP257 style guidelines
+    \item Improving code test coverage \url{https://codecov.io/github/biopython/biopython/}
+    \item Planning what to do with legacy Alphabet objects
+    \item Simplifying our release process
+    \item Other new contributor driven efforts
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Changes to help Community Building}
+\begin{itemize}
+   \item GitHub Issue templates (to help with bug reporting)
+   \item Pull request templates (to help with expectations)
+   \item \texttt{CODEOWNERS} file to help assign code reviews
+   \item Using \textit{Easy Fix} tag on some issues, \\ intended for new contributors
+   \item Already have a \texttt{CONTRIBUTING} text file
+   \item Do we need a \texttt{CODE\_OF\_CONDUCT} too?
+   \item \textbf{What else should we be doing?}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Acknowledgements}
+Thank you to:
+\begin{itemize}
+    \item All our contributors to date
+    \item Google Summer of Code (supporting past students)
+    \item Open Bioinformatics Foundation (OBF) for domain name, mailing lists, etc
+\end{itemize}
+
+\vspace{1.1cm}
+\center\includegraphics[width=0.9\paperwidth]{../images/Hutton-thanks-banner}
+\end{frame}
+
+% etc
+\end{document}
