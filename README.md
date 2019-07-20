@@ -5,8 +5,8 @@
 ## Overview
 
 This repository contains the source code and images for slides
-to public talks or guest lecturers written by Peter Cock at the
-James Hutton Institute Dundee.
+to public talks or guest lectures written by Peter Cock at the
+James Hutton Institute, Dundee.
 
 ## Building slides and handouts
 
