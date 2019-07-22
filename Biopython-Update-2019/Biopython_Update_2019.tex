@@ -29,6 +29,18 @@ The Biopython Contributors (\href{https://twitter.com/Biopython}{@biopython on T
 \frame[plain]{\titlepage}
 
 \begin{frame}
+\frametitle{Contents}
+\begin{itemize}
+\item Introducing Biopython
+\item Contributors and releases this past year
+\item Dual licensing update
+\item Documentation and automation
+\item On going and planned work
+\item Community building
+\end{itemize}
+\end{frame}
+
+\begin{frame}
   \frametitle{What is Biopython?}
 
   \begin{itemize}
@@ -96,102 +108,153 @@ The Biopython Contributors (\href{https://twitter.com/Biopython}{@biopython on T
 
 
 \begin{frame}
-\frametitle{Biopython 1.73 (April 2019)}
+\frametitle{Recent releases}
 \begin{itemize}
-   \item Stuff
+\item \href{https://www.open-bio.org/2018/12/18/biopython-1-73-released/}{Biopython 1.73 (April 2019)}
+  \begin{itemize}
+  \item Added Python 3.7 support
+  \end{itemize}
+\item \href{https://www.open-bio.org/2019/07/16/biopython-1-74-released/}{Biopython 1.74 (July 2019)}
+  \begin{itemize}
+  \item Finally have full API "docstring" coverage, \\
+        special mention to recent contributor Sergio Valqui
+  \end{itemize}
+\item Most code changes to:
+  \begin{itemize}
+  \item API documentation
+  \item Python coding style
+    \begin{itemize}
+    \item No consensus on adopting \texttt{black} Python formatting style
+    \end{itemize}
+  \item Dual licensing...
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Biopython's Open Source License}
+\begin{itemize}
+\item Open Source Initiative \url{https://opensource.org/}
+    maintains a list of approved open source licenses
+\item Biopython's license is not (quite) on that list
+\item We're gradually dual-licensing under 3-clause BSD license
+\item Requires checking each file to confirm all contributors agree
+\item Biopython 1.70 (July 2017), about $2\%$ of main code done
+\item Biopython 1.72 (June 2018), about $30\%$ of main code done
+\item Biopython 1.74 (July 2019), just over $50\%$ of main code done
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Documentation}
+\begin{itemize}
+\item Documentation on our main website
+  \begin{itemize}
+  \item Originally MediaWiki
+  \item Converted to Markdown using GitHub Pages
+  \end{itemize}
+\item Tutorial and Cookbook
+  \begin{itemize}
+  \item Written in \LaTeX for PDF and HTML
+  \end{itemize}
+\item API documentation (Python ``docstrings'' in the code)
+  \begin{itemize}
+  \item Had been turned into HTML using \texttt{epydoc}
+  \item Standardised on reStructuredText (RST)
+  \item Now using Sphinx \texttt{apidoc}
+  \end{itemize}
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Biopython 1.74 (July 2019)}
+\frametitle{Documentation - biopython.org}
+\vspace{-0.8cm}
+\includegraphics[width=\textwidth]{images/main}
+\end{frame}
+
+\begin{frame}
+\frametitle{Documentation - API via epydoc (old)}
+\vspace{-0.8cm}
+\includegraphics[width=\textwidth]{images/epydoc}
+\end{frame}
+
+\begin{frame}
+\frametitle{Documentation - API via Sphinx apidoc}
+\vspace{-0.8cm}
+\includegraphics[width=\textwidth]{images/sphinx-apidoc}
+\end{frame}
+
+\begin{frame}
+\frametitle{In progress: Tutorial \textit{\&} API via Sphinx?}
+\vspace{-0.8cm}
+\includegraphics[width=\textwidth]{images/read-the-docs}
+\end{frame}
+
+\begin{frame}
+\frametitle{Documentation - Automation}
 \begin{itemize}
-    \item Stuff
+\item Website - automatic publishing on GitHub pages
+\item Tutorial \& cookbook - manual step for each release
+\item Running \texttt{epydoc} was manual step for each release
+\item Running Sphinx \texttt{apidoc} under TravisCI
+  \begin{itemize}
+  \item Deploying Sphinx \texttt{apidoc} via GitHub Pages
+  \item Automatic destination based on version, e.g.
+    \begin{itemize}
+    \item \url{https://biopython.org/docs/1.74/api/}
+    \item \url{https://biopython.org/docs/dev/api/}
+    \end{itemize}
+  \end{itemize}
+\item Next steps
+  \begin{itemize}
+  \item Fine tune Sphinx \texttt{apidoc} presentation
+  \item Better match Sphinx and website themes
+  \item Automate Tutorial \& Cookbook build and deploy
+  \end{itemize}
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Python Versions}
+\frametitle{Release builds - Automation}
 \begin{itemize}
-\item Currently support Python 2.7, 3.4, 3.5, 3.6
-\item About to drop Python 3.4 and add Python 3.8
-\item Clear end of life for Python 2 support in 2020, pledged on \url{http://python3statement.org/}
-\item Also support and test on PyPy
-\item Support for Jython now deprecated
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{PyPI, pip and wheels}
-\begin{itemize}
-\item Recommend ``pip install biopython``
-\item This fetches from Python Package Index (PyPI)
-\item Will use pre-compiled wheel files if available
-\item We build the wheels on AppVeyor \& TravisCI
+\item Build pre-compiled wheels on AppVeyor \& TravisCI
     \begin{itemize}
         \item Following NumPy community in using the multibuild system, \\
               developed by Matthew Brett and the MacPython project. \\
               \url{https://github.com/matthew-brett/multibuild} \\
               \url{https://github.com/biopython/biopython-wheels}
     \end{itemize}
+\item Uploaded to Python Package Index (PyPI)
+\item Recommend \texttt{pip install biopython}
+\item Thanks to conda-forge, can do \texttt{conda install biopython}
 \end{itemize}
 \end{frame}
 
 
 \begin{frame}
-\frametitle{Biopython's Open Source License}
+\frametitle{Python Versions - Testing Automation}
 \begin{itemize}
-\item The Open Source Initiative \url{https://opensource.org/}
-    maintains a list of approved open source licenses
-\item This is the \textit{de facto} gold standard.
-\item Biopython's license is not (quite) on that list.
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Historical Permission Notice \\ and Disclaimer (HPND)}
-Permission to use, copy, modify and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies[,] [and] that both [that] [the] copyright notice and this permission notice appear in supporting documentation[, and that the name [of] $<$copyright holder$>$ [or $<$related entities$>$] not be used in advertising or publicity pertaining to distribution of the software without specific, written prior permission]. [$<$copyright holder$>$ makes no representations about the suitability of this software for any purpose. It is provided ``as is'' without express or implied warranty.]
-
-%[<copyright holder> DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS[,][.] IN NO EVENT SHALL <copyright holder> BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.]
-
-\url{https://opensource.org/licenses/HPND}
-\end{frame}
-
-\begin{frame}
-\frametitle{Biopython License Agreement}
-\textit{Italics highlighting ony substantial difference to the HPND:}
-\vspace{6pt} \\
-
-Permission to use, copy, modify, and distribute this software and its documentation \textit{with or without modifications} and for any purpose and without fee is hereby granted, provided that any copyright notices appear in all copies and that both those copyright notices and this permission notice appear in supporting documentation, and that the names of the contributors or copyright holders not be used in advertising or publicity pertaining to distribution of the software without specific prior permission.
-
-%THE CONTRIBUTORS AND COPYRIGHT HOLDERS OF THIS SOFTWARE DISCLAIM ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL THE CONTRIBUTORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-\end{frame}
-
-\begin{frame}
-\frametitle{Biopython's Open Source License}
-\begin{itemize}
-\item We could ask the Open Source Initiative (OSI)
-    to approve our license (as an HPND variant?)
-\item We've agreed to gradually dual-license the code
-    under our old license and the 3-clause BSD license
-\item Requires checking each file to confirm all
-    contributors agree to dual licensing
-\item As of Biopython 1.72, about $20\%$ of code files done
-\item Only one minor contributor has refused to date
+\item Currently test on Python 2.7, 3.4, 3.5, 3.6, and 3.7
+\item About to drop Python 3.4 and add Python 3.8
+\item Clear end of life for Python 2 support in 2020, \\ we've pledged on \url{http://python3statement.org/}
+\item Also support and test on PyPy
+\item Support for Jython deprecated
 \end{itemize}
 \end{frame}
 
 
 \begin{frame}
-\frametitle{On going work}
+\frametitle{On going and planned work}
 \begin{itemize}
-    \item Moving from epydoc to Sphinx for API docs \\
-          (and from \LaTeX to Sphinx for Tutorial?)
+    \item Further simplify release \& documentation builds
     \item Improving compliance with PEP8 and PEP257 style guidelines
+    \item Start working towards \texttt{numpydoc} style for docstrings?
     \item Improving code test coverage \url{https://codecov.io/github/biopython/biopython/}
-    \item Planning what to do with legacy Alphabet objects
-    \item Simplifying our release process
-    \item Other new contributor driven efforts
+    \item Removing/simplifying  legacy Alphabet objects
+    \item Dropping Python 2 support in early 2020 (see above)
+    \item Other contributor driven efforts
 \end{itemize}
 \end{frame}
 
@@ -199,13 +262,16 @@ Permission to use, copy, modify, and distribute this software and its documentat
 \begin{frame}
 \frametitle{Changes to help Community Building}
 \begin{itemize}
-   \item GitHub Issue templates (to help with bug reporting)
-   \item Pull request templates (to help with expectations)
+\item Already use:
+   \begin{itemize}
+   \item GitHub Issue templates (helps bug reporting)
+   \item GitHub Pull Request templates (to help with expectations)
+   \item \textit{Easy Fix} tag on some issues, intended for new contributors
+   \item \texttt{CONTRIBUTING} file highlighting coding conventions etc
    \item \texttt{CODEOWNERS} file to help assign code reviews
-   \item Using \textit{Easy Fix} tag on some issues, \\ intended for new contributors
-   \item Already have a \texttt{CONTRIBUTING} text file
-   \item Do we need a \texttt{CODE\_OF\_CONDUCT} too?
-   \item \textbf{What else should we be doing?}
+   \end{itemize}
+\item Discussing an OBF-wide \textit{Code of Conduct}
+\item \textbf{What else should we be doing?}
 \end{itemize}
 \end{frame}
 
@@ -215,8 +281,9 @@ Permission to use, copy, modify, and distribute this software and its documentat
 Thank you to:
 \begin{itemize}
     \item All our contributors to date
+    \item Contributors' funders for indirect support
     \item Google Summer of Code (supporting past students)
-    \item Open Bioinformatics Foundation (OBF) for domain name, mailing lists, etc
+    \item Open Bioinformatics Foundation (OBF) for domain name, mailing lists, etc -- any maybe later a Code of Conduct?
 \end{itemize}
 
 \vspace{1.1cm}
